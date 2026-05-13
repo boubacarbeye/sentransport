@@ -10,6 +10,7 @@ import Footer from "./Footer";
 function App() {
   const [recherche, setRecherche] = useState("");
   const [ligneSelectionnee, setLigneSelectionnee] = useState(null);
+  const [nbrRecherche,setNbrRecherche] = useState(0);
 
   const lignes = [
   {
@@ -121,18 +122,23 @@ function App() {
       setLigneSelectionnee(ligne);
     }
   }
-
+  function LigneTrouvee() {
+    if(lignesFiltrees.length === 0 ) 
+      return "Aucune ligne trouvée" ;
+          
+    return (lignesFiltrees.length +  " lignes trouvées");
+  }
   return (
     <div className="App">
       <Header />
 
       <main className="contenu">
-        <Recherche valeur={recherche} onChange={setRecherche} />
+       <p>Vous avez effectue {recherche.length} recherche(s) </p> 
+        <Recherche valeur={recherche} onChange={setRecherche} className="recherche" />
+        <button className="resetbtn" onClick={() =>setRecherche("")}>Effacer</button>
 
-        <p className="resultat-recherche">
-          {lignesFiltrees.length} ligne
-          {lignesFiltrees.length > 1 ? "s" : ""} trouvée
-          {lignesFiltrees.length > 1 ? "s" : ""}
+        <p className="resultat-recherche"> 
+          {LigneTrouvee()}
         </p>
 
         {lignesFiltrees.map((ligne) => (

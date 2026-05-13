@@ -13,6 +13,20 @@
    box-sizing: border-box;
    flex: 1;
 }
+.resetbtn{
+     border: none;
+     padding: 15px 30px;
+     font-weight: bold;
+     border-radius: 5px;
+     background-color:rgba(247, 93, 93, 0.942);
+     cursor: pointer;
+     color: white;
+}
+.recherche{
+  display: inline-block;
+  width: 80%;
+  margin-right: 20px;
+}
 @media (max-width: 600px) {
   .contenu {
     padding: 12px;
