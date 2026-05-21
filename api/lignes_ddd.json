@@ -92,5 +92,31 @@
       "HLM",
       "Sandaga"
     ]
-  }
+  },
+  {
+    "id": 7,
+    "numero": "42",
+    "depart": "Gare Centrale",
+    "arrivee": "Aéroport",
+    "arrets":6,
+    "listeArrets": [
+      "Gare Centrale",
+       "Marché", 
+       "Université", 
+       "Zone Industrielle", 
+       "Aéroport"]
+  },
+  {
+    "id": 8,
+    "numero": "11",
+    "depart": "Grand Yoff",
+    "arrivee": "Yoff Village",
+    "arrets":18,
+    "listeArrets": [
+      "Grand Yoff",
+      "Castors", 
+      "Ouakam", 
+      "Yoff Village"
+    ]
+  }  
 ]
